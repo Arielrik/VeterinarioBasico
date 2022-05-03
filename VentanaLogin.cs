@@ -21,17 +21,17 @@ namespace VeterinarioBasico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            VentanaPrincipal v = new VentanaPrincipal();
-            v.Show();
+            //this.Hide();
+            //VentanaPrincipal v = new VentanaPrincipal();
+            //v.Show();
             if (conexion.loginVeterinario(textBoxDNI.Text, textBoxPass.Text)){
-                //this.Hide();
-                //VentanaPrincipal v = new VentanaPrincipal();
-                //v.Show();
+                this.Hide();
+                VentanaPrincipal v = new VentanaPrincipal();
+                v.Show();
             }
             else
             {
-                //MessageBox.Show("El usuario/contraseña son incorrectos");
+                MessageBox.Show("El usuario/contraseña son incorrectos");
             }
 
         }
